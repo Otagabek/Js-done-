@@ -3,33 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tab Interface</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="tab-container">
-        <div class="tabs">
-            <button class="tab-button active" data-tab="tab1">Tab 1</button>
-            <button class="tab-button" data-tab="tab2">Tab 2</button>
-            <button class="tab-button" data-tab="tab3">Tab 3</button>
-        </div>
-        <div class="tab-content active" id="tab1">
-            <h2>First Title</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, voluptatum. Ipsum amet qui, nostrum impedit inventore minima quam incidunt quibusdam nemo, architecto esse reiciendis recusandae harum nam consequatur illo obcaecati atque error non voluptatum, dolores at alias. Ad, dicta ipsam? Laboriosam omnis quia eos delectus pariatur voluptatibus tenetur dolor illo quam hic nesciunt nemo provident saepe perferendis soluta, ipsam rerum quis impedit in, obcaecati ratione tempora, neque itaque esse! Blanditiis velit quibusdam totam nesciunt reprehenderit voluptas laboriosam possimus rerum ea dicta voluptate, impedit nisi saepe incidunt corporis itaque explicabo, omnis dolore ducimus accusantium. Aut nihil, cum harum pariatur doloremque voluptatem.</p>
-        </div>
-        <div class="tab-content" id="tab2">
-            <h2>Second Title</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, voluptatum. Ipsum amet qui, nostrum impedit inventore minima quam incidunt quibusdam nemo, architecto esse reiciendis recusandae harum nam consequatur illo obcaecati atque error non voluptatum, dolores at alias. Ad, dicta ipsam? Laboriosam omnis quia eos delectus pariatur voluptatibus tenetur dolor illo quam hic nesciunt nemo provident saepe perferendis soluta, ipsam rerum quis impedit in, obcaecati ratione tempora, neque itaque esse! Blanditiis velit quibusdam totam nesciunt reprehenderit voluptas laboriosam possimus rerum ea dicta voluptate, impedit nisi saepe incidunt corporis itaque explicabo, omnis dolore ducimus accusantium. Aut nihil, cum harum pariatur doloremque voluptatem.</p>
-       
-        </div>
-        <div class="tab-content" id="tab3">
-            <h2>Third Title</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, voluptatum. Ipsum amet qui, nostrum impedit inventore minima quam incidunt quibusdam nemo, architecto esse reiciendis recusandae harum nam consequatur illo obcaecati atque error non voluptatum, dolores at alias. Ad, dicta ipsam? Laboriosam omnis quia eos delectus pariatur voluptatibus tenetur dolor illo quam hic nesciunt nemo provident saepe perferendis soluta, ipsam rerum quis impedit in, obcaecati ratione tempora, neque itaque esse! Blanditiis velit quibusdam totam nesciunt reprehenderit voluptas laboriosam possimus rerum ea dicta voluptate, impedit nisi saepe incidunt corporis itaque explicabo, omnis dolore ducimus accusantium. Aut nihil, cum harum pariatur doloremque voluptatem.</p>
-        </div>
-        <div>
-            
+    <div class="container">
+        <div class="calculator">
+            <form>
+               <div class="display">
+                <input type="text" name="display">
+               </div> 
+               <div>
+                <input type="button" value="AC" onclick="display.value = ''" class="operator">
+                <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)" class="operator">
+                <input type="button" value="." onclick="display.value += '.'" class="operator">
+                <input type="button" value="/" onclick="display.value += '/'" class="operator">
+               </div>
+               <div>
+                <input type="button" value="7" onclick="display.value += '7'">
+                <input type="button" value="8" onclick="display.value += '8'">
+                <input type="button" value="9" onclick="display.value += '9'">
+                <input type="button" value="*" onclick="display.value += '*'" class="operator">
+               </div>
+               <div>
+                <input type="button" value="4" onclick="display.value += '4'">
+                <input type="button" value="5" onclick="display.value += '5'">
+                <input type="button" value="6" onclick="display.value += '6'">
+                <input type="button" value="-" onclick="display.value += '-'" class="operator">
+               </div>
+               <div>
+                <input type="button" value="1" onclick="display.value += '1'">
+                <input type="button" value="2" onclick="display.value += '2'">
+                <input type="button" value="3" onclick="display.value += '3'">
+                <input type="button" value="+" onclick="display.value += '+'" class="operator">
+               </div>
+               <div>
+                <input type="button" value="00" onclick="display.value += '00'">
+                <input type="button" value="0" onclick="display.value += '0'">
+                <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal operator">
+                <!-- <input type="button" value="+"> -->
+               </div>
+               
+            </form>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
